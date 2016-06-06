@@ -1,0 +1,18 @@
+<%= museum.name %>,
+<%= museum.specialty %>,
+<%= museum.description %>,
+<%= museum.url %>
+
+<img class="museum-image" style="width: 50%;" src="<%= museum.image %>">
+
+<button class="edit"    
+    <a class='button' href='/museums/edit'>Edit Info</a>
+</button>
+
+<form action="/museums/ <%= @museum.id %>" method="post" class="delete">
+    <input type="hidden" name="method" value="delete">
+    <input type="submit" value="delete">
+</form>
+
+
+    

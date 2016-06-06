@@ -2,35 +2,7 @@ class Museo < Sinatra::Base
 
   #general route actions
   get '/' do
-    erb :index
-  end
-
-	#shows all
- 	get '/museums' do
-    binding.pry
-		@museums = Museum.all
-    erb :index
-  end
-
-	#adds new museum - new or create?
-
-
-	get '/museums/new' do
-    @museums = Museum.new
-    erb(:"museums/new")
-  end
-
-
-	#edits museum
-
-	#deletes museum
-  delete '/museums/:id/delete' do
-    @museum = museum.find(params[:id])
-    if @museum.destroy
-      redirect('/museums')
-    else
-      redirect("/museums/#{@museum.id}")
-    end
+    redirect '/museums'
   end
 
 end

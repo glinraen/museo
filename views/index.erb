@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Museo</title>
-  </head>
-  <body>
-    <h1>Museums</h1>
-
-    <ul>
+<h1>Museums</h1>
+<ul>
 <% @museums.each do | museum | %>
   <li>
     <p><strong>"<%= museum.name %>",  
     <%= museum.specialty %>, 
-    <%= musuem.url %></p>
+    <%= museum.url %></p>
+    <img class="museum-image" style="width: 50%;" src="<%= museum.image %>">
   </li>
 <% end %>
 </ul>
-  </body>
-</html>
