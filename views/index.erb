@@ -1,1 +1,19 @@
-<h1>Museo!</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Museo</title>
+  </head>
+  <body>
+    <h1>Museums</h1>
+
+    <ul>
+<% @museums.each do | museum | %>
+  <li>
+    <p><strong>"<%= museum.name %>",  
+    <%= museum.specialty %>, 
+    <%= musuem.url %></p>
+  </li>
+<% end %>
+</ul>
+  </body>
+</html>
