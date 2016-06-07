@@ -23,9 +23,10 @@ class Museo < Sinatra::Base
     erb :show
   end
 
-	#edits museum
-  get '/museum/:id/edit' do
+	#edits /updates museum entry
+  get '/museums/:id' do
     @museum = Museum.find(params[:id])
+    @museum.update_attributes(params)
     erb :show
   end
 

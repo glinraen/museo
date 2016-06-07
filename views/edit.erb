@@ -1,0 +1,8 @@
+<div class="container">
+
+<h2>Edit Museum</h2>
+
+<form action='/museums/ <%= "#{@museum.id}" %>' method="post">
+	<input name="museum[name]" value='<%= "#{@museum.name}" %>'>
+	<input type="submit" value="Create">
+</div>
