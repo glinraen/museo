@@ -1,13 +1,13 @@
-<%= @museum.name %>,
-<%= @museum.specialty %>,
-<%= @museum.description %>,
-<%= @museum.url %>
+<div class="container-fluid">
+	<%= @museum.name %>,
+	<%= @museum.specialty %>,
+	<%= @museum.description %>,
+	<%= @museum.url %>
+</div>
 
-<img class="museum-image" style="width: 50%;" src="<%= @museum.image %>">
+<img class="museum-image" style="width: 50%;" id="showimage" src="<%= @museum.image %>">
 
-
-
-<form action="/museums/ <%= @museum.id %>">
+<form>
 	<button type="button" class="btn btn-success btn-lg">Edit</button>
     <button type="button" class="btn btn-danger btn-lg">Delete</button>
     <button type="button" class="btn btn-primary btn-lg">Home</button>

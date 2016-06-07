@@ -1,5 +1,7 @@
 class Museo < Sinatra::Base	
 
+set :public_folder, 'public'
+
   get '/museums' do
     @museums = Museum.all
     erb :index
@@ -24,11 +26,14 @@ class Museo < Sinatra::Base
   end
 
 	#edits /updates museum entry
-  get '/museums/:id' do
+  put '/museums/:id' do
     @museum = Museum.find(params[:id])
-    @museum.update_attributes(params)
-    erb :show
+    @museum.update(params[museum])
+    redirect to "/museums/#{params[:id]}"
+    #erb :show
   end
+
+
 
 
 	#deletes museum

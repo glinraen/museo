@@ -1,5 +1,11 @@
+
 #header {
 	background-size: cover;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#showimage {
 	margin-left: auto;
     margin-right: auto;
 }
@@ -8,13 +14,20 @@
 	width: 50%;
 }
 
-.centered{
+.centered {
     margin: 0 auto;
 }
 
 .container {
 
 }
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+
 
 
 
