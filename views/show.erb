@@ -3,15 +3,17 @@
 	<%= @museum.specialty %>,
 	<%= @museum.description %>,
 	<%= @museum.url %>
-</div>
+</div id="showimage">
 
 <img class="museum-image" style="width: 50%;" id="showimage" src="<%= @museum.image %>">
 
 <form>
-	<button type="button" class="btn btn-success btn-lg">Edit</button>
+	
+	<a href="/museums/<%= @museum.id %>/edit" class="btn btn-success">Edit</a>
     <button type="button" class="btn btn-danger btn-lg">Delete</button>
-    <button type="button" class="btn btn-primary btn-lg">Home</button>
+    <a href="/museums" class="btn btn-primary ">Home</a>
 </form>
+
 
 
      

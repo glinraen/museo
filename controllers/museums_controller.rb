@@ -25,12 +25,16 @@ set :public_folder, 'public'
     erb :show
   end
 
+  get '/museums/:id/edit' do
+    @museum = Museum.find(params[:id])
+    erb :edit
+  end
+
 	#edits /updates museum entry
   put '/museums/:id' do
     @museum = Museum.find(params[:id])
-    @museum.update(params[museum])
-    redirect to "/museums/#{params[:id]}"
-    #erb :show
+    @museum.update_attributes(params[:museum])
+    redirect to "/museums"
   end
 
 

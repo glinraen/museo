@@ -1,17 +1,19 @@
 
-#header {
-	background-size: cover;
+header {
 	margin-left: auto;
     margin-right: auto;
 }
 
 #showimage {
 	margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .museum-image {
 	width: 50%;
+  border-style: solid;
+  border: 20px 20px;
+  border-color: #692b0a;
 }
 
 .centered {
@@ -25,6 +27,26 @@
 .col-centered{
     float: none;
     margin: 0 auto;
+}
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  z-index: -1;
+}
+
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
 }
 
 

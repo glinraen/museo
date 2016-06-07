@@ -1,7 +1,7 @@
 <div class="container">
 <h2>Edit Museum</h2>
 <form action='/museums/<%= "#{@museum.id}" %>' method="POST">
-	<input type="hidden" name="method" value="PUT">
+	<input type="hidden" name="_method" value="PUT">
 	<input name="museum[name]" value='<%= "#{@museum.name}" %>'><br>
 	<input image="museum[name]" value='<%= "#{@museum.image}" %>'><br>
 	<input specialty="museum[specialty]" value='<%= "#{@museum.specialty}" %>'><br>

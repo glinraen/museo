@@ -1,32 +1,17 @@
 
-<img src="images/MuseOhead.jpg" class="header">
-<div class="btn-group">
-<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	Action
-</button>
-	<div class="dropdown-menu">
-		<a class="dropdown-item" href="#">Action</a>
-		<a class="dropdown-item" href="#">Another action</a>
-		<a class="dropdown-item" href="#">Something else here</a>
-		<div class="dropdown-divider"></div>
-		<a class="dropdown-item" href="#">Separated link</a>
-  </div>
+
+<div class="container-fluid">
+	<input type="button" class="btn btn-large" value="Find Museum by Specialty"/>
+	</button>
+	
 </div>
 
 <div class="container-fluid">
-	<ul class="dropdown-menu" role="menu">
-    	<li><a href="#">Tablet</a></li>
-    	<li><a href="#">Smartphone</a></li>
-  	</ul>
-</div>
-<div class="container">
 <ul>
 <% @museums.each do | museum | %>
   <li>
 	  <a href="/museums/<%= museum.id %>" >
-	    <%= museum.name %></a>:  
-	    <%= museum.specialty %>, 
-	    <%= museum.url %>
+	    <%= museum.name %></a>
   </li>
 <% end %>
 </ul>

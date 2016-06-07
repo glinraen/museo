@@ -11,5 +11,6 @@ require './models/museum'
 require './app'
 require './controllers/museums_controller'
 
+use Rack::MethodOverride 
 
 run Museo
