@@ -1,9 +1,9 @@
-<%= museum.name %>,
-<%= museum.specialty %>,
-<%= museum.description %>,
-<%= museum.url %>
+<%= @museum.name %>,
+<%= @museum.specialty %>,
+<%= @museum.description %>,
+<%= @museum.url %>
 
-<img class="museum-image" style="width: 50%;" src="<%= museum.image %>">
+<img class="museum-image" style="width: 50%;" src="<%= @museum.image %>">
 
 <button class="edit"    
     <a class='button' href='/museums/edit'>Edit Info</a>

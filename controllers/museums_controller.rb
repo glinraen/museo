@@ -5,7 +5,7 @@ class Museo < Sinatra::Base
     erb :index
   end
 
-  #adds new museum 
+  #adds new museum entry
 	get '/museums/new' do
     @museums = Museum.new
     erb :new
@@ -19,7 +19,7 @@ class Museo < Sinatra::Base
 
   #show/view one museum
   get '/museums/:id' do
-    @museum = Museum.find_by_id(params[:id])
+    @museum = Museum.find(params[:id])
     erb :show
   end
 
@@ -28,8 +28,6 @@ class Museo < Sinatra::Base
     @museum = Museum.find(params[:id])
     erb :show
   end
-
-
 
 
 	#deletes museum
