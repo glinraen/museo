@@ -2,8 +2,13 @@ class Museo < Sinatra::Base
 
 set :public_folder, 'public'
 
+  #gets index or query
   get '/museums' do
-    @museums = Museum.all
+    if params[:query]
+      @museums = Museum.where(specialty: params[:query])
+    else
+      @museums = Museum.all
+    end
     erb :index
   end
 
@@ -37,13 +42,10 @@ set :public_folder, 'public'
     redirect to "/museums"
   end
 
-
-
-
-	#deletes museum
-  delete '/museums/:id' do
-    @museum = museum.find(params[:id])
+	#deletes museum entry
+  delete '/museums/:id/delete' do
+    @museum = Museum.find(params[:id])
     @museum.destroy
-      redirect('/museums')
+    redirect to "/museums"
   end
 end

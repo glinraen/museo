@@ -1,18 +1,28 @@
+<br>
+<br>
+<ul class="container-fluid show-museum">
+	<li>
+		<%= @museum.name %><br>
+		<%= @museum.specialty %><br>
+		<%= @museum.description %><br>
+		<%= @museum.url %><br>
+	</li>
+</ul>
+<br>
+<br>
+
 <div class="container-fluid">
-	<%= @museum.name %>,
-	<%= @museum.specialty %>,
-	<%= @museum.description %>,
-	<%= @museum.url %>
-</div id="showimage">
+	<img class="museum-image" style="width: 50%;" src="<%= @museum.image %>">
+<br>
+		<form>
+			<a href="/museums/<%= @museum.id %>/edit" class="btn btn-success">Edit</a>
+    		
+    		<a href="/museums/<%= @museum.id %>/delete" class="btn btn-danger" input type="_method" type="hidden" value="delete">Delete</a>
 
-<img class="museum-image" style="width: 50%;" id="showimage" src="<%= @museum.image %>">
+    		<a href="/museums" class="btn btn-primary ">Home</a>
+		</form>
+</div>
 
-<form>
-	
-	<a href="/museums/<%= @museum.id %>/edit" class="btn btn-success">Edit</a>
-    <button type="button" class="btn btn-danger btn-lg">Delete</button>
-    <a href="/museums" class="btn btn-primary ">Home</a>
-</form>
 
 
 

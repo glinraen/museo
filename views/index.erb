@@ -1,18 +1,46 @@
 
 
+<br>
+<br>
+<div>
+	<select class="form-control">
+    <option value="art">Art</option>
+    <option value="prison">Prison</option>
+	<option value ="history">History</option>
+	<option value ="literary">Literary</option>
+	<option value ="natural history">Natural History</option>
+	<option value ="children">Childrens</option>
+	<option value ="ethic or history">Ethnic or History</option>
+	<option value ="science">Science</option>
+	<option value ="wax">Wax</option>
+	<option value ="history or military">History or Military</option>
+	<option value ="religious">Religious</option>
+	<option value ="entertainment">Entertainment</option>
+	<option value ="ethnic">Ethnic</option>
+	<option value ="cultural">Cultural</option>
+	<option value ="science and nat history">Science and Nat History</option>
+	<option value ="entertainment">Entertainment</option>
+	<option value ="maritime">Maritime</option>
+	<option value ="performing arts">Performing Arts</option>
+	<option value ="aviation">Aviation</option>
+	<option value ="local history">Local History</option>
+	<option value ="museum ship">Museum Ship</option>
+	<option value ="biographical">Biographical</option>
+</select>
+</div>
+<br>
+<br>
 <div class="container-fluid">
-	<input type="button" class="btn btn-large" value="Find Museum by Specialty"/>
-	</button>
-	
+	<a href="/museums/new" class="btn btn-success">Add a Museum</a>
 </div>
 
 <div class="container-fluid">
-<ul>
+	<ul>
 <% @museums.each do | museum | %>
-  <li>
-	  <a href="/museums/<%= museum.id %>" >
+  		<li>
+	  		<a href="/museums/<%= museum.id %>" >
 	    <%= museum.name %></a>
-  </li>
+  		</li>
 <% end %>
-</ul>
+	</ul>
 </div>

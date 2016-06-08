@@ -1,12 +1,18 @@
-<div class="container">
-<h2>Edit Museum</h2>
-<form action='/museums/<%= "#{@museum.id}" %>' method="POST">
-	<input type="hidden" name="_method" value="PUT">
-	<input name="museum[name]" value='<%= "#{@museum.name}" %>'><br>
-	<input image="museum[name]" value='<%= "#{@museum.image}" %>'><br>
-	<input specialty="museum[specialty]" value='<%= "#{@museum.specialty}" %>'><br>
-	<input description="museum[description]" value='<%= "#{@museum.description}" %>'><br>
-	<input url="museum[url]" value='<%= "#{@museum.url}" %>'><br>
-	<input type="submit" value="Edit">
-</form>
+<div class="container-fluid">
+	<div class="center-div">
+
+		<h1>Edit Museum</h1>
+		<form action='/museums/<%= "#{@museum.id}" %>' method="POST">
+			Name: <br>
+			<input type="hidden" name="_method" value="PUT">
+			<input name="museum[name]" value='<%= "#{@museum.name}" %>'>
+			<br><br>
+			<input image="museum[name]" value='<%= "#{@museum.image}" %>'><br><br>
+			<input specialty="museum[specialty]" value='<%= "#{@museum.specialty}" %>'>
+			<br><br>
+			<input description="museum[description]" value='<%= "#{@museum.description}" %>'><br><br>
+			<input url="museum[url]" value='<%= "#{@museum.url}" %>'><br><br>
+			<input type="submit" value="Edit">
+		</form>
+	</div>
 </div>
