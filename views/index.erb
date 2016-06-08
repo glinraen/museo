@@ -3,7 +3,9 @@
 <br>
 <br>
 <div>
-	<select class="form-control">
+<form>
+<select class="form-control" name="query">
+	<option value="">All</option>
     <option value="art">Art</option>
     <option value="prison">Prison</option>
 	<option value ="history">History</option>
@@ -27,14 +29,18 @@
 	<option value ="museum ship">Museum Ship</option>
 	<option value ="biographical">Biographical</option>
 </select>
+<br>
+<input type="submit">
+</form>
 </div>
 <br>
 <br>
 <div class="container-fluid">
 	<a href="/museums/new" class="btn btn-success">Add a Museum</a>
 </div>
+<br>
 
-<div class="container-fluid">
+<div class="container-fluid museum-index">
 	<ul>
 <% @museums.each do | museum | %>
   		<li>

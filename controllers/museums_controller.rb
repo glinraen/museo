@@ -4,8 +4,9 @@ set :public_folder, 'public'
 
   #gets index or query
   get '/museums' do
-    if params[:query]
-      @museums = Museum.where(specialty: params[:query])
+    p params[:query]
+    if params[:query] && !params[:query].empty?
+      @museums = Museum.where(specialty: params[:query].capitalize)
     else
       @museums = Museum.all
     end
