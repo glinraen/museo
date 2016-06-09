@@ -2,11 +2,6 @@ body {
   margin: 0;
 }
 
-header {
-	margin-left: auto;
-  margin-right: auto;
-}
-
 ul {
  list-style-type:none; 
 }
@@ -23,9 +18,9 @@ h1 {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 30%;
+  width: 35%;
   height: 100%;
-  background-color: #692b0a;
+  border-color: #692b0a;
   border-radius: 20px;
 }
 
@@ -41,10 +36,11 @@ h1 {
 
 .museum-image {
 	width: 50%;
-  border-style: solid;
-  border: 20px 20px;
-  border-color: #46d0ff;
+  padding: 1px;
+  border: 20px solid #692b0a;
+  background-color: 692b0a;
 }
+
 
 .centered {
     margin: 0 auto;
@@ -86,7 +82,7 @@ h1 {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 200px;
+  width: 250px;
   height: 350px;
   background-color: #692b0a;
   border-radius: 20px;

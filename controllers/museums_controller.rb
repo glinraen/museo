@@ -44,7 +44,7 @@ set :public_folder, 'public'
   end
 
 	#deletes museum entry
-  delete '/museums/:id/delete' do
+  delete '/museums/:id' do
     @museum = Museum.find(params[:id])
     @museum.destroy
     redirect to "/museums"

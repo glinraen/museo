@@ -13,14 +13,18 @@
 
 <div class="container-fluid">
 	<img class="museum-image" style="width: 50%;" src="<%= @museum.image %>">
+
+<br>
+<br>
 <br>
 		<form>
 			<a href="/museums/<%= @museum.id %>/edit" class="btn btn-success">Edit</a>
     		
-    		<a href="/museums/<%= @museum.id %>/delete" class="btn btn-danger" input type="_method" type="hidden" value="delete">Delete</a>
+    		<a href="/museums/<%= @museum.id %>" class="btn btn-danger" method="post" name="_method" input type="submit" value="delete">Delete</a>
 
     		<a href="/museums" class="btn btn-primary ">Home</a>
 		</form>
+		
 </div>
 
 
