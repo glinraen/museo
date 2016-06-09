@@ -5,7 +5,7 @@
 		<%= @museum.name %><br>
 		<%= @museum.specialty %><br>
 		<%= @museum.description %><br>
-		<%= @museum.url %><br>
+		<a href="<%= @museum.url %>">Website<br>
 	</li>
 </ul>
 <br>
@@ -15,13 +15,14 @@
 <br>
 <br>
 <br>
-	<form>
+	
 		<a href="/museums/<%= @museum.id %>/edit" class="btn btn-success">Edit</a>
-    		
-    	<a href="/museums/<%= @museum.id %>" class="btn btn-danger" method="post" name="_method" input type="submit" value="delete">Delete</a>
-
-    	<a href="/museums" class="btn btn-success">Home</a>
+    <form action="/museums/<%= @museum.id %>" method="post">	
+    	<input type="hidden" name="_method" value="delete">
+    	<input  class="btn btn-danger" type="submit" value="Delete">
 	</form>	
+    	<a href="/museums" class="btn btn-success">Home</a>
+	
 </div>
 
 
