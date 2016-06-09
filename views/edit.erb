@@ -1,7 +1,5 @@
-<div class="container-fluid">
-	<div class="center-div">
-
-		<h1>Edit Museum</h1>
+<div class="container-fluid center-div">
+	<h1>Edit Museum</h1>
 		<form action='/museums/<%= "#{@museum.id}" %>' method="POST">
 			Name: <br>
 			<input type="hidden" name="_method" value="PUT">
@@ -14,5 +12,4 @@
 			<input url="museum[url]" value='<%= "#{@museum.url}" %>'><br><br>
 			<input type="submit" value="Edit">
 		</form>
-	</div>
 </div>

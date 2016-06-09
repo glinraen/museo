@@ -10,21 +10,18 @@
 </ul>
 <br>
 <br>
-
 <div class="container-fluid">
 	<img class="museum-image" style="width: 50%;" src="<%= @museum.image %>">
-
 <br>
 <br>
 <br>
-		<form>
-			<a href="/museums/<%= @museum.id %>/edit" class="btn btn-success">Edit</a>
+	<form>
+		<a href="/museums/<%= @museum.id %>/edit" class="btn btn-success">Edit</a>
     		
-    		<a href="/museums/<%= @museum.id %>" class="btn btn-danger" method="post" name="_method" input type="submit" value="delete">Delete</a>
+    	<a href="/museums/<%= @museum.id %>" class="btn btn-danger" method="post" name="_method" input type="submit" value="delete">Delete</a>
 
-    		<a href="/museums" class="btn btn-primary ">Home</a>
-		</form>
-		
+    	<a href="/museums" class="btn btn-success">Home</a>
+	</form>	
 </div>
 
 
