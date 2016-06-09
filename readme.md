@@ -18,13 +18,13 @@ I created this project for a class assignment. There are many different and inte
 
 ### This project is a full-stack application using:
 
-*HTML5
-*CSS
-*Bootstrap
-*Ruby
-*Active Record
-*Sinatra
-*Postgres
+..*HTML5
+..*CSS
+..*Bootstrap
+..*Ruby
+..*Active Record
+..*Sinatra
+..*Postgres
 
 ## Installation
 
